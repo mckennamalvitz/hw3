@@ -1,0 +1,10 @@
+<div class="row">
+  <% for entry in @entries %>
+    <div class="col-3">
+      <h4><%= entry["author"] %></h4>
+      <p><%= entry["body"] %></p>
+    </div>
+  <% end %>
+</div>
+
+<p><a href="/entries/new">New Entry</a></p>
