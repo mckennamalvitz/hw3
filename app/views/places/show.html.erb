@@ -8,9 +8,9 @@
 <ul>
   <% for entry in @entries %>
     <li>
-      <a href="/entries/<%= entry["id"] %>">
-        <%= entry["name"] %>
-      </a>
+        <%= entry["title"] %>
+        <%= entry["description"] %>
+        <%= entry["occured_on"] %>
     </li>
   <% end %>
 </ul>

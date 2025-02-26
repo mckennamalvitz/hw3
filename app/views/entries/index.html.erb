@@ -1,10 +1,12 @@
+<%= @entries.inspect%>
+
 <div class="row">
   <% for entry in @entries %>
     <div class="col-3">
-      <h4><%= entry["author"] %></h4>
-      <p><%= entry["body"] %></p>
+      <h4><%= entry["title"] %></h4>
+      <p><%= entry["description"] %></p>
+      <p><%= entry["occurred_on"] %></p>
     </div>
   <% end %>
 </div>
 
-<p><a href="/entries/new">New Entry</a></p>

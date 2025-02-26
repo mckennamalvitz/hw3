@@ -5,6 +5,7 @@ class EntriesController < ApplicationController
   end
   
   def new
+    @place = Place.find_by({ "id" => params["place_id"] })
     # render posts/new view with new Post form
   end
 
@@ -14,14 +15,17 @@ class EntriesController < ApplicationController
 
     # assign user-entered form data to Entry's columns
     @entry["title"] = params["title"]
-    @entry["text"] = params["description"]
-    @entry["date"] = params["occured_on"]
-    
+    @entry["description"] = params["description"]
+    @entry["occurred_on"] = params["occured_on"]
 
+    # Assign relationship
+    @entry["place_id"] = params["place_id"]
+    
     # save Entry row
     @entry.save
 
     # redirect user
-    redirect_to "/entries"
+    redirect_to "/places"
   end
+
 end
