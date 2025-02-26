@@ -3,15 +3,14 @@
 <h1><%= @place["name"] %></h1>
 
 
-<h3>Entries</h3>
+<!-- <h3>Entries</h3> -->
 
 <ul>
   <% for entry in @entries %>
-    <li>
-        <%= entry["title"] %> <p>
-        <%= entry["description"] %> <p>
-        <%= entry["occurred_on"] %>
-    </li>
+        <h3><%= entry["title"] %></h3>
+        <h5><%= entry["occurred_on"] %></h5>
+        <p><%= entry["description"] %></p>
+        <hr>
   <% end %>
 </ul>
 

@@ -25,7 +25,8 @@ class EntriesController < ApplicationController
     @entry.save
 
     # redirect user
-    redirect_to "/places"
+    redirect_to "/places/#{@entry['place_id']}"
+    #redirect_to "/places"
   end
 
 end
